@@ -6,7 +6,6 @@ import { Arcjet } from './arcjet'
 //     status,
 //     json: jest.fn().mockResolvedValue(value)
 //   }))
-
 ;(global as any).crypto = require('@trust/webcrypto')
 // ;(global as any).TextEncoder = TextEncoder
 // ;(global as any).TextDecoder = TextDecoder

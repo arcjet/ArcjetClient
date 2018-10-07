@@ -1,10 +1,10 @@
-import { exportKey, storeKey, bytesToBlob } from './utils';
+import { exportKey, storeKey, bytesToBlob } from './utils'
 import { cryptoConfig } from './constants'
-import { Record } from './record';
+import { Record } from './record'
 
 export class Arcjet {
-  host: string;
-  site: string;
+  host: string
+  site: string
 
   constructor() {
     this.host = 'http://localhost:8000'
@@ -34,8 +34,7 @@ export class Arcjet {
       if (res.status === 200) {
         const bytes = await res.arrayBuffer()
         return new Record(new Uint8Array(bytes), type, metadata)
-      }
-      else {
+      } else {
         throw new Error('Failed to fetch')
       }
     } catch (err) {
@@ -61,6 +60,7 @@ export class Arcjet {
         method: 'POST',
         body: JSON.stringify({
           metadata: record.metadata,
+          header: record.header,
         }),
       })
 

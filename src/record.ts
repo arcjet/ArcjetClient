@@ -23,7 +23,7 @@ export class Record {
   constructor(content: Uint8Array, type: string, metadata: any) {
     if (metadata) this.metadata = metadata
     if (content) this.content = content
-    if (type) this.type =  type
+    if (type) this.type = type
   }
 
   async sign() {
@@ -63,7 +63,7 @@ export class Record {
 
     const partialRecord = new Uint8Array([
       ...metadataContentBytes,
-      ...JSONToBytes(this.header)
+      ...JSONToBytes(this.header),
     ])
 
     const id = await digest(partialRecord)
@@ -104,14 +104,11 @@ export class Record {
 
     const partialRecord = new Uint8Array([
       ...metadataContentBytes,
-      ...JSONToBytes(this.header)
+      ...JSONToBytes(this.header),
     ])
 
     const id = await digest(partialRecord)
 
-    assert(
-      bytesEquals(id, hexToBytes(this.id)),
-      'Record ID matches hash',
-    )
+    assert(bytesEquals(id, hexToBytes(this.id)), 'Record ID matches hash')
   }
 }
