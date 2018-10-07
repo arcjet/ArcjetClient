@@ -1,0 +1,43 @@
+{
+  "name": "arcjet",
+  "version": "0.6.0",
+  "main": "lib/index.js",
+  "author": "Hunter Trujillo <cryptoquick@gmail.com>",
+  "license": "MIT",
+  "repository": "arcjet/arcjet",
+  "homepage": "https://www.arcjet.com",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json",
+    "build:watch": "tsc -p ./tsconfig.json --watch",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@trust/webcrypto": "^0.9.2",
+    "@types/jest": "^23.3.3",
+    "@types/node": "^10.11.4",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=9.9.0"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

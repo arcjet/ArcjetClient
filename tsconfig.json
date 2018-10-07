@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "src",
+    "outDir": "lib",
+    "module": "es2015",
+    "target": "es2015",
+    "lib": ["esnext", "dom"],
+    "sourceMap": true,
+    "allowJs": false,
+    "moduleResolution": "classic",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "forceConsistentCasingInFileNames": true,
+    "suppressImplicitAnyIndexErrors": false,
+    "preserveConstEnums": false,
+    "esModuleInterop": true
+  },
+  "exclude": ["lib", "node_modules"]
+}
